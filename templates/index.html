@@ -25,12 +25,13 @@
 		<h1> Welcome to Lucy's Chat App. You are welcome to do anything, just please don't crash the server</h1>
 	</div>
 
-	<div id="random-string">
+	<div id="send-message" src="/chatapp.db">
 	</div>
-	<button id="target"> 
-		Click me to get a random string
-	</button>
-
+	<form method="POST">
+		<input type="text" name = "text">
+		<button id="target"> 
+			Send
+		</button>
 
 </body>
 </html>

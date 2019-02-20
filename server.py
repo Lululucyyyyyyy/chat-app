@@ -5,7 +5,7 @@ import sqlite3
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=["POST", "GET"])
 def homepg():
 	return render_template('index.html')
 
