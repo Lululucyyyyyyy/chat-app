@@ -1,13 +1,13 @@
 body{
 	font-family: 'Roboto', sans-serif;
-	color: black;
-	background-image: url("https://images2.alphacoders.com/598/thumb-1920-598673.jpg");
+	color: #929292;
+	background-image: url("https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Background-Images-2.png");
 }
 
 .title-head{
 	text-align: center;
 	float: top;
-	color: #ffffff;
+	color: #929292;
 	font-family: 'Shadows Into Light Two', cursive;
 }
 
@@ -15,7 +15,7 @@ body{
 	width: 200px;
 	border: none;
 	border-radius: 3px;
-	color: #1d6bc2;
+	color: black;
 	padding: 10px 10px;
 	text-align: center;
 	text-decoration: none;
@@ -42,7 +42,7 @@ a:hover, a:active{
 	width: 100%;
 	border: none;
 	text-align: center;
-	color: #ffffff;
+	color: black;
 	font-family: 'Shadows Into Light Two', cursive;
 }
 

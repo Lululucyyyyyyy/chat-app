@@ -1,17 +1,13 @@
 $( document ).ready(function() {
-    $("#send-message").click(function() {
-      alert("Handler for .click() called.");
-
-    $("#get_message").click(function()){
-      $.fetchAllMessages('chat-app.db', function(data) {
-        $.each(data, function(text, text) {
-          $("#" + text).val(text);
-          console.log(data)
-        });
-      });
-    }
-
-    $.setInterval(fetchAllMessages(), 1000);
+    $('#get_messages', function(data){
+      $.ajax({
+      type: 'GET', 
+      url: '~/'
+      data: {text, text}
+    }).done(function( o ){
+      $('#get_messages' ).append( `<p>${data}</p>` );
+    });});
+    $.setInterval(ajax(), 1000);
 });
 
           /*
@@ -24,4 +20,7 @@ $( document ).ready(function() {
         });
       }
       });
+
+      $("#send-message").click(function() {
+      alert("Handler for .click() called.");
       */
