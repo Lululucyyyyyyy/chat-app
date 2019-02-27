@@ -1,12 +1,19 @@
 $( document ).ready(function() {
-    $('#get_messages', function(data){
+    $('#get_messages' function(data){
       $.ajax({
       type: 'GET', 
-      url: '~/'
-      data: {text, text}
-    }).done(function( o ){
+      url: '/get_messages',
+      var messages = data.getElementById('send').value;
+      data: JSON.stringify({ messages: messages }),
+      success: function(response){
+        console.log(response);
+      },
+      error: function(error){
+        console.log(error);
+      }
+    });
       $('#get_messages' ).append( `<p>${data}</p>` );
-    });});
+    });
     $.setInterval(ajax(), 1000);
 });
 

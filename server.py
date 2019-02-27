@@ -2,6 +2,7 @@ from flask import Flask, request, render_template, make_response
 import requests
 import os
 import sqlite3
+import json
 
 app = Flask(__name__)
 
@@ -23,20 +24,18 @@ def homepg():
 		conn.close()
 	return render_template('index.html')
 
+@app.route('/get_messages', methods=['GET'])
+def message():
+	if request.method == 'GET':
+		messages = get_messages()
+	return json.dumps({'status': 'OK', 'messages': messages})
+
 def get_messages():
 	conn = sqlite3.connect('twitter.db')
 	c = conn.cursor()
 	latest_text = c.execute('SELECT * FROM chat').fetchall()[:200]
 	conn.close()
 	return latest_text
-
-@app.route('/get_messages', methods=['GET'])
-def message():
-	if requests.method == 'GET':
-		get_messages()
-	return render_template('index.html')
-
-
 
 if __name__ == '__main__':
 	app.run()

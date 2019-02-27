@@ -11,6 +11,13 @@ body{
 	font-family: 'Shadows Into Light Two', cursive;
 }
 
+h2{
+	text-align: center;
+	float: top;
+	color: #929292;
+	font-family: 'Shadows Into Light Two', cursive;
+}
+
 .button{
 	width: 200px;
 	border: none;
@@ -24,20 +31,29 @@ body{
 	font-family: 'Shadows Into Light Two', cursive;
 }
 
-a:link, a:viborder: none{
-	background-color: white;
-	color: #1d6bc2;
-	padding: 10px 10px;
-	text-align: center;
-	text-decoration: none;
+.text_blob{
+	width: 200px;
+	border: solid #aa87ff;
+	border-radius: 3px;
+	padding: 10px;
+	text-align: left;
 	display: inline-block;
 	font-size: 10px;
-	font-family: 'Shadows Into Light Two', cursive;
+	font-family: 'Shadows Into Light Two', cursive;;
 }
 
-a:hover, a:active{
-	background-color: #b5d8ff;
+.other{
+	align-self: left;
 }
+.me{
+	align-self: right;
+}
+
+.column {
+	float: left;
+	width: 50%;
+}
+
 .display{
 	width: 100%;
 	border: none;
@@ -50,12 +66,12 @@ input{
 	width: 75%;
 	padding: 5px, 5px;
 	margin: center;
-	border: 1px solid #1d6bc2;
+	border: 1px solid #aa87ff;
 	font-family: 'Shadows Into Light Two', cursive;
 }
 
 input[type=text]:focus {
-	background-color: #b5d8ff;
-	color: #282b5e;
+	background-color: #d1beff;
+	color: #ffffff;
 	font-family: 'Shadows Into Light Two', cursive;
 }

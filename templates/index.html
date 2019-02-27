@@ -19,7 +19,7 @@
 
 
 	<link rel="icon" href="data:;base64,=">
-	
+
   	<script src="/static/chat.js"></script>
 </head>
 
@@ -28,13 +28,24 @@
 		<h1> Welcome to Lucy's Chat App. You are welcome to do anything, just please don't crash the server</h1>
 	</div>
 
-	<form method="POST">
-		<input type="text" name = "text">
-		<button id="target"> 
-			Send
-		</button>
-
-	<div id="get_messages" class='display'>
+	<div class="column">
+		<h2>Other person</h2>
+		<div id="get_messages" class='display'>
+			{%for message in messages%}
+				<div class='text_blob'>
+					{{message}}
+				</div>
+			{%endfor%}
+		</div>
+	</div>
+	<div class="column" id='send'>
+		<h2>You</h2>
+		<form method="POST">
+			<input type="text" name = "text">
+			<button id="target"> 
+				Send
+			</button>
+		</form>
 	</div>
 
 </body>
